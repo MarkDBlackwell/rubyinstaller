@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# coding: utf-8
 
 # Ensure '.' is in the LOAD_PATH in Ruby 1.9.2
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
@@ -30,6 +31,9 @@ require 'rake/extracttask'
 require 'rake/checkpoint'
 require 'rake/env'
 require 'rake/ruby_tools'
+
+# Add tests
+require 'raketask/test'
 
 # scan all override definitions and load them
 Dir.glob('override/*.rb').sort.each do |f|
